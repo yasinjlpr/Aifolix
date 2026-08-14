@@ -107,5 +107,3 @@ PathForge is my first public GitHub project.
 ---
 
 **Copyright © 2026 Yasin Jalilpour. All rights reserved.**
-
-> > > > > > > b57d2057f1018db93d5537bca9db8ad392c49ca4
