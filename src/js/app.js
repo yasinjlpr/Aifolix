@@ -333,7 +333,7 @@ const saveBtn = document.getElementById("saveBtn");
 // اثر انگشت مخفی برای اثبات مالکیت
 // ============================================
 console.log(
-  "%c⚠️ PathForge is protected by copyright!",
+  "%c⚠️ Aifolix is protected by copyright!",
   "font-size: 20px; color: #f87171; font-weight: bold;",
 );
 console.log(

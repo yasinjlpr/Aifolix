@@ -1,5 +1,5 @@
 {
-  "name": "path-forge",
+  "name": "Aifolix",
   "version": "1.4.0",
   "description": "Convert a folder tree text into a Windows BAT folder/file creation script.",
   "main": "main.js",
@@ -15,8 +15,8 @@
     "electron-builder": "^26.0.12"
   },
   "build": {
-    "appId": "com.yasinjalilpour.pathforge",
-    "productName": "PathForge",
+    "appId": "com.yasinjalilpour.Aifolix",
+    "productName": "Aifolix",
     "directories": {
       "output": "dist"
     },

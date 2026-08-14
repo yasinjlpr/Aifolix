@@ -300,11 +300,11 @@ function createFromStructure(outputDirectory, text) {
 // ============================================
 // Integrity marker
 // ============================================
-const AUTHOR_MARKER = "Yasin_PathForge_2026";
+const AUTHOR_MARKER = "Yasin_Aifolix_2026";
 
 function verifyIntegrity() {
-  const hiddenKey = "PathForge_Owned_By_Yasin";
-  if (AUTHOR_MARKER !== "Yasin_PathForge_2026" || !hiddenKey.includes("Yasin")) {
+  const hiddenKey = "Aifolix_Owned_By_Yasin";
+  if (AUTHOR_MARKER !== "Yasin_Aifolix_2026" || !hiddenKey.includes("Yasin")) {
     console.error("Integrity check failed.");
   }
 }
