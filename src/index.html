@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self'; script-src 'self';" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PathForge - StructureToBAT</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <h1>PathForge</h1>
+          <p>
+            Convert Ai folder tree into a Build script for your preferred shell
+          </p>
+        </div>
+
+        <div class="top-actions">
+          <button
+            id="openBtn"
+            class="secondary has-tooltip"
+            data-tooltip="Open a .txt / .tree file">
+            Open
+          </button>
+          <button
+            id="clearBtn"
+            class="secondary has-tooltip"
+            data-tooltip="Clear all inputs and outputs">
+            Clear
+          </button>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <section class="panel input-panel">
+          <div class="panel-header">
+            <div class="panel-title">
+              <h2>Project Structure</h2>
+              <span id="inputStatus">Paste or open a structure</span>
+            </div>
+            <div class="action-group">
+              <button
+                id="pasteBtn"
+                class="small has-tooltip"
+                data-tooltip="Paste structure from clipboard">
+                Paste
+              </button>
+              <button
+                id="exampleBtn"
+                class="small has-tooltip"
+                data-tooltip="Load an example tree structure">
+                Load Example
+              </button>
+            </div>
+          </div>
+
+          <textarea
+            id="structureInput"
+            spellcheck="false"
+            placeholder="Paste your tree structure here...
+
+website/
+├── public/
+│   ├── images/
+│   └── favicon.ico
+├── src/
+│   └── main.js
+└── package.json"></textarea>
+
+          <div class="drop-zone" id="dropZone">
+            <span>Drop a .txt / .tree / .md file here</span>
+          </div>
+        </section>
+
+        <section class="panel output-panel">
+          <div class="panel-header">
+            <div class="panel-title">
+              <h2 id="outputTitle">Generated Batch</h2>
+              <span id="outputStatus">Ready</span>
+            </div>
+
+            <div class="output-controls">
+              <label class="language-select">
+                <span>Language</span>
+                <select id="languageSelect" aria-label="Output language">
+                  <option value="batch">Batch (.bat)</option>
+                  <option value="powershell">PowerShell (.ps1)</option>
+                  <option value="bash">Bash (.sh)</option>
+                  <option value="zsh">Zsh (.zsh)</option>
+                </select>
+              </label>
+              <div class="button-row">
+                <button
+                  id="generateBtn"
+                  class="generate has-tooltip"
+                  data-tooltip="Click Here If Code Did Not Generate">
+                  Generate
+                </button>
+                <button
+                  id="copyBtn"
+                  class="secondary has-tooltip"
+                  data-tooltip="Copy the generated script to clipboard">
+                  Copy
+                </button>
+                <button
+                  id="saveBtn"
+                  class="secondary has-tooltip"
+                  data-tooltip="Save the generated script">
+                  Save
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <pre id="batOutput"><code>@echo off
+
+:: Your generated BAT file will appear here.
+
+echo Ready.</code></pre>
+        </section>
+
+        <section class="panel preview-panel">
+          <div class="panel-header">
+            <div class="panel-title">
+              <h2>Detected Structure</h2>
+              <span id="countStatus">0 items</span>
+            </div>
+          </div>
+          <div id="preview" class="preview">
+            <div class="empty">Nothing detected yet.</div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>v1.4 MultiShell</span>
+        <span>Copyright (c) 2026 Yasin Jalilpour (PathForge)</span>
+        <span>HTML · CSS · JavaScript</span>
+      </footer>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="js/parser.js"></script>
+    <script src="js/generator.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
